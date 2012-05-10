@@ -63,7 +63,7 @@ public class DejaGNU2JunitXML {
 	    String testMethod = line.substring (result.length () + testCase.length () + 4);
 
 
-	    if (!result.equals ("PASS")) {
+	    if (!result.equals ("PASS") && !result.equals ("KFAIL") && !result.equals ("XFAIL")) {
 		Element eTestCase = doc.createElement("testcase");
 		eTestSuite.appendChild(eTestCase);
 
